@@ -1,0 +1,14 @@
+applications:
+
+- disk_quota: 1024M
+  host: APIGEEApp 
+  name: ABC 
+  path: target\ABC-0.0.1-SNAPSHOT.jar 
+  domain: APIGEEApp.net
+
+  instances: 1 
+  memory: 512M
+   
+  env:
+    KNJ_ENABLE_TT: "true"
+    KNJ_SAMPLING: 1

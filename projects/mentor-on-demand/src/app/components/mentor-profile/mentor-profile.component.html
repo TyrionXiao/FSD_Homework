@@ -1,0 +1,107 @@
+<div class="container">
+    <div class="row">
+        <div   style="margin: auto;">
+            <div class="form-group">
+                <label for="username" class="col-sm-3 control-label">Username</label>
+                <div class="col-sm-9 ">
+                    <input type="text" 
+                    id="username"                    
+                    class="form-control"
+                    *ngIf="edited=='N'" disabled
+                    [(ngModel)]="user.username"
+                    #username="ngModel">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="firstname" class="col-sm-3 control-label">Firstname</label>
+                <div class="col-sm-9 ">
+                    <input type="text" 
+                    id="firstname"                    
+                    class="form-control"
+                    *ngIf="edited=='N'" disabled
+                    [(ngModel)]="user.firstname"
+                    #username="ngModel">
+                </div>
+            </div>
+            <div class="form-group">       
+                <label for="lastname" class="col-sm-3 control-label">Lastname</label>
+                <div class="col-sm-9 ">
+                    <input type="text" 
+                    id="lastname"                    
+                    class="form-control"
+                    *ngIf="edited=='N'" disabled
+                    [(ngModel)]="user.lastname"
+                    #username="ngModel">
+                </div>
+            </div>
+            <div class="form-group">               
+                <label for="contactNo" class="col-sm-3 control-label">Contact Number</label>
+                <div class="col-sm-9 ">
+                    <input type="text" 
+                    id="contactNo"                    
+                    class="form-control"
+                    *ngIf="edited=='N'" disabled
+                    [(ngModel)]="user.contactNo"
+                    #username="ngModel">
+                </div>
+            </div>
+            <div class="form-group">               
+                <label for="contactNo" class="col-sm-3 control-label">Contact Number</label>
+                <div class="col-sm-9 ">
+                    <input type="text" 
+                    id="contactNo"                    
+                    class="form-control"
+                    *ngIf="edited=='N'" disabled
+                    [(ngModel)]="user.contactNo"
+                    #username="ngModel">
+                </div>               
+            </div>
+            <div class="form-group">               
+                <label for="linkedinUrl" class="col-sm-3 control-label">Linkedin URL</label>
+                <div class="col-sm-9 ">
+                    <input type="text" 
+                    id="linkedinUrl"                    
+                    class="form-control"
+                    *ngIf="edited=='N'" disabled
+                    [(ngModel)]="user.linkedinUrl"
+                    #username="ngModel">
+                </div>               
+            </div>
+            <div class="form-group">               
+                <label for="Role" class="col-sm-3 control-label">Role</label>
+                <div class="col-sm-9 ">
+                    <input type="text" 
+                    id="Role"                    
+                    class="form-control"
+                    *ngIf="edited=='N' " disabled
+                    [(ngModel)]="user.Role"
+                    #username="ngModel">
+                </div>               
+            </div>
+            <div class="form-group">               
+                <label for="yearsOfExperience" class="col-sm-3 control-label">Years of experience</label>
+                <div class="col-sm-9 ">
+                    <input type="text" 
+                    id="yearsOfExperience"                    
+                    class="form-control"
+                    *ngIf="edited=='N' " disabled
+                    [(ngModel)]="user.yearsOfExperience"
+                    #username="ngModel">
+                </div>               
+            </div>
+            <div class="form-group">               
+               <div class="col-md-4 " >
+                   <div class="col-md-4 ">
+                    <button class="btn btn-info" (click)="edite()">Edit</button>
+                   </div>
+                   <div class="col-md-4 ">
+                    <button class="btn btn-info" (click)="confirm()">Confirm</button>
+                   </div>
+                   <div class="col-md-4 ">
+                    <button class="btn btn-info" type="reset">Cancel</button>
+                   </div>
+                </div>               
+            </div>
+        </div>
+    </div>
+</div>

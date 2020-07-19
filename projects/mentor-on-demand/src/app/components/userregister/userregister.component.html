@@ -1,0 +1,83 @@
+<div class="form-bg">
+    <div class="container " >
+        <div class="row">
+            <div class="col-md-offset-4 col-md-6 col-sm-offset-3 col-sm-6">
+            <title>Register</title>
+    
+            <form (ngSubmit)="submit()" #loginForm="ngForm" class="form-horizontal">
+    
+                <div class="form-group">
+                    <label for="email" class="col-sm-3 control-label">Email</label>
+    
+                    <input class="col-sm-6" id="email"  type="email" placeholder="Email" required name="email">
+    
+                </div>
+    
+                <div class="form-group">
+    
+                    <label for="password" class="col-sm-3 control-label">Password</label>
+                    <input class="col-sm-6" id="password"  type="password" placeholder="Password"  required
+    
+                           name="password">
+    
+                </div>
+
+                <div class="form-group">
+                    <label for="first_name" class="col-sm-3 control-label">first_name</label>
+    
+                    <input class="col-sm-6" id="first_name" >
+    
+                </div>
+
+                <div class="form-group">
+                    <label for="last_name" class="col-sm-3 control-label">last_name</label>
+    
+                    <input class="col-sm-6" id="last_name" >
+    
+                </div>
+
+                <div class="form-group">
+                    <label for="contact_number" class="col-sm-3 control-label">contact_number</label>
+    
+                    <input class="col-sm-6" id="contact_number" >
+    
+                </div>
+                <div class="form-group">
+                    <label  class="col-sm-3 control-label">role:</label>
+
+                    <input id="Student" type="radio" class="col-sm-1" name="role" required >
+                    <label for="Student"  class="col-sm-1 control-label"> Student</label>
+                    <input id="Mentor" type="radio" class="col-sm-1" name="role" required >
+                    <label for="Mentor"  class="col-sm-1 control-label"> Mentor</label>
+    
+                </div>
+
+                <div class="form-group">
+                    <label for="linkedin_url" class="col-sm-3 control-label">linkedin_url</label>
+    
+                    <input class="col-sm-6" id="linkedin_url" >
+    
+                </div>
+                <div class="form-group">
+                    <label for="years_of_experience" class="col-sm-3 control-label">years_of_experience</label>
+    
+                    <input class="col-sm-6" id="years_of_experience" >
+    
+                </div>
+    
+                <div class="form-group">
+    
+                    <button  type="reset" class="btn" >Reset
+    
+                    </button>
+    
+                    <button  type="submit">Submit</button>
+    
+                </div>
+    
+            </form>
+        </div>
+    </div>
+    </div>
+    </div>
+    

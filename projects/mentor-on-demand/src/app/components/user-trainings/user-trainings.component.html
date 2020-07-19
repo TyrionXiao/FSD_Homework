@@ -1,0 +1,46 @@
+
+    <div class="container">
+        <div class="row">           
+            <div id="search" >
+                <table>
+                    <tr>
+
+                        <td>
+                            <select id="searchItems" (change)="getChange($event.target.value)" >
+                                <option [value]="item1" *ngFor="let item1 of tech ; let id=index ">{{item1}}</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select id="timeSlot"  (change)="getChangeTech($event.target.value)">
+                                <option [value]="item2" *ngFor="let item2 of timeSlots ; let id=index ">{{item2}}</option>
+                            </select>
+                        </td>
+                        <td>
+                            <button type="submit" (click)="searchMentors()"
+                            [routerLink]="['/SearchTrainings/Mentors']" routerLinkActive="router-link-active"
+                            >Search</button>
+                        </td>
+
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                                <button (click)="searchTrainings()">Search Trainings</button>
+                        </td>
+                        <td>
+                            <button (click)="searchCurrentTrainings()">Current Trainings</button>
+                        </td>
+                        <td>
+                            <button (click)="searchCompletedTrainings()">Completed Trainings</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <br>
+            <hr>
+            
+        </div>
+        <div><router-outlet></router-outlet></div>
+    </div>
+  
+

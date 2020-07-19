@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div>
+            <table class="table table-bordered">
+                <thead class="thead-dark">
+                    <td>username</td>
+                    <td>timeRang</td>
+                    <td>skill</td>
+                    <td>experience</td>
+                    <td>NoOfTrainings</td>
+                    <td>Charge</td>
+                    <td>Status</td>
+                </thead>
+                <tr *ngFor="let item of MentorList">
+                    <td>{{item.username}}</td>
+                    <td>{{item.timeRange}}</td>
+                    <td>{{item.skill}}</td>
+                    <td>{{item.experience}}</td>
+                    <td>{{item.NoOfTrainings}}</td>
+                    <td>{{item.Charge}}</td>
+                    <td align="center" height="25" >
+                        
+                        <button class="btn btn-info" (click)="Apply(item.id)"  *ngIf="item.status=='available' " >Apply</button>
+                        <button class="btn btn-info" (click)="Deal(item.id)"  *ngIf="item.status=='agree' " >Deal</button>
+                        <button class="btn btn-warn"   *ngIf="item.status=='disagree' " disabled>Rejected by Mentor</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

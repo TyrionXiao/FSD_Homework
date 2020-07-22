@@ -1,1 +1,33 @@
-<p>training works!</p>
+<div class="container">
+    <div class="row">
+        <div>
+            <table class="table table-bordered">
+                <thead class="thead-dark">
+                    <td>mentorname</td>
+                    <td>startDate</td>
+                    <td>endDate</td>
+                    <td>skill</td>
+                    <td>t_Name</td>
+                    <td>rating</td>
+                    <td>progress</td>
+                    <td>Status</td>
+                </thead>
+                <tr *ngFor="let item of Trainings">
+                    <td>{{item.mentorname}}</td>
+                    <td>{{item.startDate}}</td>
+                    <td>{{item.endDate}}</td>
+                    <td>{{item.skill}}</td>
+                    <td>{{item.t_Name}}</td>
+                    <td>{{item.rating}}</td>
+                    <td>{{item.progress}}</td>
+                    <td>{{item.Status}}</td>
+                    <td align="center" height="25" >
+                        
+                        <button class="btn btn-info" (click)="Donext(item.id)"  *ngIf="item.progress >0 " >Go to next training step</button>
+                        <button class="btn btn-info" (click)="Start(item.id)"  *ngIf="item.progress==0 " >Start Training</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

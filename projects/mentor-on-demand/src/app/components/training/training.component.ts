@@ -9,8 +9,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class TrainingComponent implements OnInit {
   public Trainings:{    "id": 1,
-  "status": "Progress",
-  "progress": 1,
+  "status": "In Progess",
+  "progress": 2,
   "fees": 100.0,
   "commissionAmount": 0.0,
   "rating": 2,
@@ -25,6 +25,21 @@ export class TrainingComponent implements OnInit {
   "skill": null,
   "razorpayPaymentId": null,
   "t_Name": null}
+
+  Donext(id){
+    this.http.get("http://localhost:8769/Trainings/"+id).subscribe((Response:any)=>{
+      this.Trainings=Response;
+      console.log(Response);
+      });  
+
+  }
+  Start(id){
+    this.http.get("http://localhost:8769/Trainings/"+id).subscribe((Response:any)=>{
+      this.Trainings=Response;
+      console.log(Response);
+      });  
+
+  }
 
   loadlist(id){
     this.http.get("http://localhost:8769/Trainings/"+id).subscribe((Response:any)=>{

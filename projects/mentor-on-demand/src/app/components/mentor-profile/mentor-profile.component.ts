@@ -25,7 +25,11 @@ export class MentorProfileComponent implements OnInit {
   "resetPasswordDate": null}
 
 
-  edite(){}
+  edite(){
+    if(this.user.role=="ADMIN"){
+      this.edited="Y";
+    }
+  }
   confirm(){}
   loadMentor(id){
     this.http.get("http://localhost:8769/user/"+id).subscribe((Response:any)=>{

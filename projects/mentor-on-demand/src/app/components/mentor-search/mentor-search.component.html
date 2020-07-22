@@ -20,8 +20,8 @@
                     <td>{{item.Charge}}</td>
                     <td align="center" height="25" >
                         
-                        <button class="btn btn-info" (click)="Apply(item.id)"  *ngIf="item.status=='available' " >Apply</button>
-                        <button class="btn btn-info" (click)="Deal(item.id)"  *ngIf="item.status=='agree' " >Deal</button>
+                        <button class="btn btn-info" (click)="Apply(item.id)"  *ngIf="status=='available' " >Apply</button>
+                        <button class="btn btn-info" (click)="Deal(item.id)"  *ngIf="status=='agree' " >Deal</button>
                         <button class="btn btn-warn"   *ngIf="item.status=='disagree' " disabled>Rejected by Mentor</button>
                     </td>
                 </tr>

@@ -34,7 +34,7 @@ export class TrainingComponent implements OnInit {
 
   }
   Start(id){
-    this.http.get("http://localhost:8769/Trainings/"+id).subscribe((Response:any)=>{
+    this.http.patch("http://localhost:8769/Trainings/"+id,this.Trainings).subscribe((Response:any)=>{
       this.Trainings=Response;
       console.log(Response);
       });  
